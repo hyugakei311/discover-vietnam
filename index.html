@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Discover Viet Nam</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link  rel="stylesheet" href="dvn.css">
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+    
+<header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home </a></li>
+		<li><a href="about.html">About </a></li>
+		<li><a href="local.html">Local Conditions </a></li>
+		<li><a href="events.html">Events </a></li>
+        <li><a href="attractions.html">Attractions </a></li>
+        <li><a href="cuisine.html">Cuisine </a></li>
+        <li><a href="culture.html">Culture </a></li>
+	</ul>
+</nav>
+
+<div id="status">
+    <ul>
+        <li><input type="text" name="search" id="search" placeholder="Search..."></li>
+        <li><a href="signin.html">Sign In </a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+</div>
+</header>
+    
+    <div id="wrapper">
+<main>
+   <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Pics/swordlake.png" alt="Sword Lake" style="width:100%">
+            <div class="text">Sword Lake, Ha Noi, Viet Nam</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Pics/literaturetemple.png" alt="Literature Temple" style="width:100%">
+            <div class="text">Literature Temple, Ha Noi, Viet Nam</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Pics/pho.png" alt="Pho" style="width:100%">
+            <div class="text">Pho - Viet Nam's speacial noodles</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Pics/halongbay.png" alt="Ha Long Bay" style="width:100%">
+            <div class="text">Ha Long Bay, Quang Nam Province, Viet Nam</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Pics/floatmarket.png" alt="Floating Market" style="width:100%">
+            <div class="text">Floating Market, Mekong Delta, Can Tho, Viet Nam</div>
+        </div>
+        
+        <a class="prev" onclick="plusSides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+    <br>
+    
+    <div style="text-align:center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    
+
+<div class="">
+    <h3>Events</h3>
+</div>
+    
+<div class="">
+    <h3>Attractions</h3>
+</div>
+    
+<div class="">
+    <h3>Cuisine</h3>
+</div>
+    
+<div class="">
+    <h3>Culture</h3>
+</div>
+    
+</main>
+</div>
+    
+<footer class="container">
+Copyright &copy;   2016 Discover Viet Nam<br>
+<a href="mailto:trang@ngo.com">trang@ngo.com</a>
+</footer>
+
+    
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+<!--<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
+    }
+    </script>-->
+    
+</body>
+</html>
